@@ -1,0 +1,263 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: 'Microsoft JhengHei';
+    text-decoration: none;
+    list-style: none;
+}
+
+.hyperlink{
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.hyperlink:hover{
+    filter: brightness(0.8);
+    transform: scale(1.1);
+}
+
+body{
+    background-color: #d8edb7;
+}
+
+.img-main{
+    width: 100%;
+    height: 90vmin;
+    position: absolute;
+    z-index: -1;
+}
+
+.img-portofolio{
+    width: 10vmin;
+    height: 10vmin;
+    margin-left: 90%;
+    margin-top: 30px;
+}
+
+.img-logo{
+    width: 375px;
+    height: 30vmin;
+    display: block;
+    margin: auto;
+    margin-top: -40px;
+}
+
+@media screen and (max-width: 425px){
+    .img-logo{
+        width: 50vmin;
+    }
+}
+
+.p-logo{
+    color: #eeeeee;
+    font-size: 28px;
+    text-align:center;
+    margin-top: 20vmin;
+}
+
+@media screen and (max-width: 476px){
+    .p-logo{
+        font-size: 20px;
+    }
+}
+
+.div-option{
+    width: 1003px;
+    display: block;
+    margin: 84px auto 30px auto;
+    background-color: #bed698;
+    border-radius: 0.3rem;
+}
+
+@media screen and (max-width: 1003px){
+    .div-option{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .div-option{
+        margin-top: 10vmin;
+    }
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-left: 78px;
+}
+
+@media screen and (max-width: 1003px){
+    .row{
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .row{
+        padding-left: 0;
+    }
+}
+
+.col{
+    width: calc(100%/2);
+    margin-bottom: 66px;
+    margin-right: 34px;
+}
+
+@media screen and (max-width: 1003px){
+    .col{
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .col{
+        width: 100%;
+        margin-bottom: 10vmin;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .col{
+        margin-right: 0;
+    }
+}
+
+.img-option{
+    width: 225px;
+    height: 225px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+@media screen and (max-width: 1003px){
+    .img-option{
+        width: calc(100%/2);
+        height: 180px;
+    }
+}
+
+.li-option{
+    width: 407px;
+    height: 225px;
+    display: flex;
+    background-color: #98c769;
+    border-radius: 1rem;
+    box-shadow: 9px 9px 12px #89b35f;
+}
+
+@media screen and (max-width: 1003px){
+    .li-option{
+        width: calc(100%/2 - 30px);
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .li-option{
+        width: 100%;
+    }
+}
+
+.div-p-option{
+    width: calc(100%/2);
+    text-align: center;
+}
+
+.p-option{
+    color: #292929;
+    line-height: 225px;
+    font-size: 28px;
+    width: calc(407 - 225px);
+    text-shadow: 1px 2px #8a8a8a;
+}
+
+@media screen and (max-width: 1003px){
+    .p-option{
+        line-height: 180px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .p-option{
+        font-size: 20px;
+    }
+}
+
+.footer-top{
+    background-color: #eeeeee;
+    height: 97px;
+}
+
+@media screen and (max-width: 700px){
+    .footer-top{
+        height: 170px;
+    }
+}
+
+.div-footer-top{
+    width: 1003px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1003px){
+    .div-footer-top{
+        width: calc(100% - 60px);
+    }
+}
+
+@media screen and (max-width: 700px){
+    .div-footer-top{
+        display: block;
+        text-align: center;
+    }
+}
+
+.div-footer_top-contact{
+    display: flex;
+}
+
+.p-footer_top-contact{
+    margin-top: 16px;
+    line-height: 32px;
+}
+
+.ul-social{
+    display: flex;
+    justify-content: space-between;
+    width: 238px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 700px){
+    .ul-social{
+        width: 100%;
+    }
+}
+
+.img-social{
+    width: 48px;
+    height: 48px;
+}
+
+.footer-bottom{
+    height: 56px;
+    background-color: #dddddd;
+}
+
+.p-copyright{
+    text-align: center;
+    line-height: 56px;
+}
+
+@media screen and (max-width: 1003px){
+    .fullscreen{
+        width: 100%;
+    }
+}
