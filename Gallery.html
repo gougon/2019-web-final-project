@@ -3,8 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Gallery</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gallery</title>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" media="screen" href="css\Gallery.css">
         <!-- firebase services -->
         <script src="js/jquery-3.3.1.js"></script>
@@ -12,39 +15,62 @@
     </head>
 <body>
     <header class="head">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid"> 
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/logo.png" class="img-nav-logo">
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="menu-item-checked p-nav-checked"><a href="#">阿哲畫廊</a></li>
+                        <li class="menu-item p-nav"><a href="#">阿哲種類</a></li>
+                        <li class="menu-item p-nav"><a href="#">註冊Tsaigle</a></li>
+                        <li class="menu-item p-nav"><a href="#">登入Tsaigle</a></li>
+                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" onclick="ReleaseSearchBar()"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+              
+        <!--
         <div class="div-nav">
             <img src="images/logo.png" class="img-nav-logo">
             <div class="div-nav-right">
                 <div class="div-unsearch">
                     <div class="menu-item-checked">
-                        <a href="Gallery.html" class="p-nav-checked visible">
+                        <a href="Gallery.html" class="p-nav-checked">
                         <div class="div-nav-item">
-                            <div class="div-nav-item-name">Gallery</div>
+                            <div class="div-nav-item-name">阿哲畫廊</div>
                         </div>
                     </a>
                     </div>
                     <div class="menu-item">
-                        <a href="Category.html" class="p-nav visible">
+                        <a href="Category.html" class="p-nav">
                         <div class="div-nav-item">
-                            <div class="div-nav-item-name">Category</div>
+                            <div class="div-nav-item-name">阿哲種類</div>
                         </div>
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="Signup.html" class="p-nav visible">
+                        <a href="Signup.html" class="p-nav">
                         <div class="div-nav-item">
-                            <div class="div-nav-item-name">SignUp</div>
+                            <div class="div-nav-item-name">註冊Tsaigle</div>
                         </div>
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="Gallery.html" class="p-nav visible">
+                        <a href="Gallery.html" class="p-nav">
                         <div class="div-nav-item">
-                            <div class="div-nav-item-name">Login</div>
+                            <div class="div-nav-item-name">登入Tsaigle</div>
                         </div>
                         </a>
                     </div>
-                    <p class="p-more bolder_smooth visible"><a href="#" class="a-more visible">UPLOAD</a></p>
                 </div>
                 <div class="div-search">
                     <input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch">
@@ -52,6 +78,8 @@
                 </div>
             </div>
         </div>
+        -->
+
         <!--
         <div class="div-nav-hidden">
             <div class="div-unsearch bolder_smooth">
@@ -63,12 +91,13 @@
         -->
     </header>
     <div class="main">
+        
         <div class="div-main-top">
             <p class="p-state">Tsaigle - Gallery being watched</p>
-            <p class="p-more bolder_smooth"><a href="#" class="a-more">+ More hot pictures</a></p>
+            <p class="p-more button hyperlink"><a href="#" class="a-more">UPLOAD</a></p>
         </div>
-        <ul class="ul-gallery row">
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+        <ul class="ul-gallery rowunb">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -86,7 +115,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -104,7 +133,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -122,7 +151,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -140,7 +169,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -158,7 +187,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -176,7 +205,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -194,7 +223,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -212,7 +241,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none li-gallery_item-rwd">
+            <li class="li-gallery_item colunb li-type_none hyperlink li-gallery_item-rwd">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -231,10 +260,10 @@
                 </div>
             </li>
         </ul>
-        <p class="p-hot_picture p-more bolder_smooth"><a href="#" class="a-more">+ More picture</a></p>
+        <p class="p-hot_picture p-more button hyperlink"><a href="#" class="a-more">+ More hot pictures</a></p>
         <br class="clear_float">
-        <ul class="ul-gallery row">
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+        <ul class="ul-gallery rowunb">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -252,7 +281,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -270,7 +299,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -288,7 +317,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -306,7 +335,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -324,7 +353,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -342,7 +371,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -360,7 +389,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none">
+            <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -378,7 +407,7 @@
                     </a>
                 </div>
             </li>
-            <li class="li-gallery_item col bolder_smooth li-type_none li-gallery_item-rwd">
+            <li class="li-gallery_item colunb li-type_none hyperlink li-gallery_item-rwd">
                 <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
@@ -398,15 +427,15 @@
             </li>
         </ul>
         <ul class="ul-change_page">
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">&laquo;</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">1</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">2</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth li-change_page-rwd">3</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth li-change_page-rwd">4</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">...</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">99</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">100</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">&raquo;</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">&laquo;</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">1</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">2</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth li-change_page-rwd">3</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth li-change_page-rwd">4</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">...</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">99</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">100</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">&raquo;</p></a></li>
         </ul>
     </div>
     <footer class="foot">
