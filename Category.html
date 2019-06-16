@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Category</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css\Category.css">
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/Category.js"></script>
+    </head>
+<body>
+    <header class="head">
+        <div class="div-nav">
+            <img src="images/logo.png" class="img-nav-logo">
+            <div class="div-nav-right">
+                <div class="div-unsearch">
+                    <div class="menu-item">
+                        <a href="Gallery.html" class="p-nav visible">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">Gallery</div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="menu-item-checked">
+                        <a href="Category.html" class="p-nav-checked visible">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">Category</div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Signup.html" class="p-nav visible">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">SignUp</div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Gallery.html" class="p-nav visible">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">Login</div>
+                        </div>
+                        </a>
+                    </div>
+                    <p class="p-more bolder_smooth visible"><a href="#" class="a-more visible">UPLOAD</a></p>
+                </div>
+                <div class="div-search">
+                    <input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch">
+                    <input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" onclick="ReleaseSearchBar()">
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="div-nav-hidden">
+            <div class="div-unsearch bolder_smooth">
+                <p><a href="Gallery.html" class="p-nav hidden">Gallery</a></p>
+                <p><a href="Category.html" class="p-nav hidden">Category</a></p>
+                <p class="p-more bolder_smooth hidden"><a href="#" class="a-more hidden">UPLOAD</a></p>
+            </div>
+        </div>
+        -->
+    </header>
+    <div class="main">
+        <div class="div-category">
+            <p class="p-state">Category</p>
+            <ul class="row">
+                <li class="col category_item li-type_none" 
+                    data-title="Cosplay・コスプレ・角色扮演" 
+                    data-desc="201">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai5.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+                <li class="col category_item li-type_none"
+                    data-title="Selfie・自撮り・自拍" 
+                    data-desc="120">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai9.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+                <li class="col category_item li-type_none" 
+                    data-title="Clothes・服・衣物" 
+                    data-desc="83">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai12.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+                <li class="col category_item li-type_none" 
+                    data-title="Tikan・ちかん・癡漢" 
+                    data-desc="182">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai16.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+                <li class="col category_item li-type_none" 
+                    data-title="Violence・乱暴さ・暴力" 
+                    data-desc="325">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai7.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+                <li class="col category_item li-type_none" 
+                    data-title="Idiot・バカ・笨蛋" 
+                    data-desc="931">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai1.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+                <li class="col category_item li-type_none" 
+                    data-title="Crowded・多い・多人" 
+                    data-desc="201">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai15.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+                <li class="col category_item li-type_none" 
+                    data-title="Daily・日常・日常" 
+                    data-desc="201">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai6.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+                <li class="col category_item li-type_none "
+                    data-title="VR・仮想現実・虛擬現實" 
+                    data-desc="201">
+                    <a href="#" class="wrapper">
+                        <img src="images/tsai8.png" class="img-picture bolder_smooth">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="ads bolder_smooth">
+            <ul>
+                <li class="li-ads li-type_none">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad1.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad2.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad3.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad4.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad5.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad6.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none hidden">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad1.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none hidden">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad2.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none hidden">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad3.gif" class="img-ad">
+                    </a>
+                </li>
+                <li class="li-ads li-type_none hidden">
+                    <a href="#" onclick="openAdWin()">
+                        <img src="images/ad4.gif" class="img-ad">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="foot">
+        <div class="div-information">
+            <div class="div-single_information">
+                <p><a href="index.html" class="p-information_title">Home</a></p>
+                <p class="p-information_content">View out main page.</p>
+            </div>
+            <div class="div-single_information">
+                <p><a href="About.html" class="p-information_title">About</a></p>
+                <p class="p-information_content">View more about us.</p>
+            </div>
+            <div class="div-single_information">
+                <p><a href="Donate.html" class="p-information_title">Donate</a></p>
+                <p class="p-information_content">Give me money!</p>
+            </div>
+        </div>
+        <div class="div-copyright">
+            <p class="p-copyright">Copyright &copy; 2019 Tsaigle</p>
+        </div>
+    </footer>
+</body>

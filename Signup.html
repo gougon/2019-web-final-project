@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Signup</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css\Signup.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- firebase services -->
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/Signup.js"></script>
+    </head>
+<body>
+    <header class="head">
+        <div class="div-nav">
+            <img src="images/logo.png" class="img-nav-logo">
+            <div class="div-nav-right">
+                <div class="div-unsearch">
+                    <div class="menu-item">
+                        <a href="Gallery.html" class="p-nav visible" style="text-decoration:none;">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">Gallery</div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Category.html" class="p-nav visible" style="text-decoration:none;">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">Category</div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="menu-item-checked">
+                        <a href="Signup.html" class="p-nav-checked visible" style="text-decoration:none;">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">SignUp</div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Gallery.html" class="p-nav visible" style="text-decoration:none;">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name" >Login</div>
+                        </div>
+                        </a>
+                    </div>
+                    <p class="p-more bolder_smooth visible"><a href="#" class="a-more visible" style="text-decoration:none;">UPLOAD</a></p>
+                </div>
+                <div class="div-search">
+                    <input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch">
+                    <input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" onclick="ReleaseSearchBar()">
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="div-nav-hidden">
+            <div class="div-unsearch bolder_smooth">
+                <p><a href="Gallery.html" class="p-nav hidden">Gallery</a></p>
+                <p><a href="Category.html" class="p-nav hidden">Category</a></p>
+                <p class="p-more bolder_smooth hidden"><a href="#" class="a-more hidden">UPLOAD</a></p>
+            </div>
+        </div>
+        -->
+    </header>
+    <div class="main">
+        <div class="div-main-top">
+            <p class="p-state">Create Your Tsaigle Account</p>
+        </div>
+        <div class="div-body">
+            <div class="div-signup">
+                <h1 class="title">Create Your Tsaigle Account</h1>
+                <hr class="line">
+                <div class="div-inner">
+                    <label for="sign-accountinput" class="label">Account:</label>
+                    <input id="sign-accountinput" type="text" class="form-control" placeholder="account">
+                </div>
+                <div class="div-inner">
+                    <label for="sign-passwordinput" class="label">Password:</label>
+                    <input id="sign-passwordinput" type="password" class="form-control" placeholder="password">
+                </div>
+                <div class="div-inner">
+                    <label for="repasswordinput" class="label">ReType-Password:</label>
+                    <input id="repasswordinput" type="password" class="form-control" placeholder="retype-password">
+                </div>
+                <div class="div-inner">
+                    <label for="emailinput" class="label">Email:</label>
+                    <input id="emailinput" type="email" class="form-control" placeholder="email">
+                </div>
+                <div class="div-inner">
+                    <label for="genderchoose" class="label" style="margin-top: 16px">Gender:</label>
+                    <form class="gender" id="genderchoose">
+                        <h6 class="innertext"><input name="gender" type="radio"> Male</h6>
+                        <h6 class="innertext"><input name="gender" type="radio"> Female</h6>
+                    </form>
+                    <div class="div-certify">
+                        <h6 class="innertext"><input type="checkbox" id="checkbox-certify1" required="true">  I certify that I'm 18 years old!</h6>
+                        <h6 class="innertext"><input type="checkbox" id="checkbox-certify2">  I agree to the Terms of Use and Privacy Policy.</h6>
+                    </div>
+                </div>
+                <div class="div-submit">
+                    <input class="submit-button" type="button" value="Sign up" id="btnSignUp">
+                </div>
+                <div class="div-inner" id="sign-info">
+                    No one login...
+                </div>
+            </div>
+            <div class="div-login_and_summary">
+                <div class="div-login">
+                    <h1 class="title">Login To Your Tsaigle Account</h1>
+                    <hr class="line">
+                    <div class="div-inner">
+                        <label for="login-accountinput" class="label">Account:</label>
+                        <input id="login-accountinput" type="text" class="form-control" placeholder="account">
+                    </div>
+                    <div class="div-inner">
+                        <label for="login-passwordinput" class="label">Password:</label>
+                        <input id="login-passwordinput" type="password" class="form-control" placeholder="password">
+                    </div>
+                    <div class="div-submit">
+                        <input class= "submit-button" type="submit" value="Login">
+                    </div>
+                </div>
+                <div class="div-summary">
+                    <h1 class="title">What Is Tsaigle?</h1>
+                    <hr class="line">
+                    <div class="div-inner-summary">
+                        <div class="div-inner-left-summary">
+                            <img class="img-summary" src="images/summary-left.jpg">
+                        </div>
+                        <div class="div-inner-right-summary">
+                            <img class="img-summary" src="images/summary-right.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot">
+        <div class="div-information">
+            <div class="div-single_information">
+                <p><a href="index.html" class="p-information_title">Home</a></p>
+                <p class="p-information_content">View out main page.</p>
+            </div>
+            <div class="div-single_information">
+                <p><a href="About.html" class="p-information_title">About</a></p>
+                <p class="p-information_content">View more about us.</p>
+            </div>
+            <div class="div-single_information">
+                <p><a href="Donate.html" class="p-information_title">Donate</a></p>
+                <p class="p-information_content">Give me money!</p>
+            </div>
+        </div>
+        <div class="div-copyright">
+            <p class="p-copyright">Copyright &copy; 2019 Tsaigle</p>
+        </div>
+    </footer>
+</body>
+</html>

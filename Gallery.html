@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gallery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css\Gallery.css">
+        <!-- firebase services -->
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/Gallery.js"></script>
+    </head>
+<body>
+    <header class="head">
+        <div class="div-nav">
+            <img src="images/logo.png" class="img-nav-logo">
+            <div class="div-nav-right">
+                <div class="div-unsearch">
+                    <div class="menu-item-checked">
+                        <a href="Gallery.html" class="p-nav-checked visible">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">Gallery</div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Category.html" class="p-nav visible">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">Category</div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Signup.html" class="p-nav visible">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">SignUp</div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Gallery.html" class="p-nav visible">
+                        <div class="div-nav-item">
+                            <div class="div-nav-item-name">Login</div>
+                        </div>
+                        </a>
+                    </div>
+                    <p class="p-more bolder_smooth visible"><a href="#" class="a-more visible">UPLOAD</a></p>
+                </div>
+                <div class="div-search">
+                    <input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch">
+                    <input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" onclick="ReleaseSearchBar()">
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="div-nav-hidden">
+            <div class="div-unsearch bolder_smooth">
+                <p><a href="Gallery.html" class="p-nav hidden">Gallery</a></p>
+                <p><a href="Category.html" class="p-nav hidden">Category</a></p>
+                <p class="p-more bolder_smooth hidden"><a href="#" class="a-more hidden">UPLOAD</a></p>
+            </div>
+        </div>
+        -->
+    </header>
+    <div class="main">
+        <div class="div-main-top">
+            <p class="p-state">Tsaigle - Gallery being watched</p>
+            <p class="p-more bolder_smooth"><a href="#" class="a-more">+ More hot pictures</a></p>
+        </div>
+        <ul class="ul-gallery row">
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai1.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">我的頭靜電很強哦~</p>
+                                <p class="p-small_num">3 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">345,230</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai2.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">你在幹什麼!</p>
+                                <p class="p-small_num">2 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">677,820</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai3.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">黑衣男子神秘一笑! 究竟是..?</p>
+                                <p class="p-small_num">2 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">287,094</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai4.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text clear_float">
+                                <p class="p-single_picture">小妞 要不要出去走走啊?</p>
+                                <p class="p-small_num">8 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-intro_heart-num p-small_num">32</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai5.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">人要衣裝，佛要金裝</p>
+                                <p class="p-small_num">1 hour ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">118,435</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai6.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">唉呀! 被發現了!</p>
+                                <p class="p-small_num">3 days ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">650,304</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai7.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">8+9 = 17</p>
+                                <p class="p-small_num">1 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">304,672</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai8.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">現在是大人時間!</p>
+                                <p class="p-small_num">2 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">883,452</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none li-gallery_item-rwd">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai1.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">我的頭靜電很強哦~</p>
+                                <p class="p-small_num">3 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">345,230</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <p class="p-hot_picture p-more bolder_smooth"><a href="#" class="a-more">+ More picture</a></p>
+        <br class="clear_float">
+        <ul class="ul-gallery row">
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai9.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">政哲向你道聲早</p>
+                                <p class="p-small_num">13 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">100,104</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai10.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">尷尬又不失禮貌的微笑......!</p>
+                                <p class="p-small_num">7 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">93,495</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai11.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">阿哲原味內衣出售</p>
+                                <p class="p-small_num">2 days ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">143,453</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai12.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">猜猜這是哪裡啊~?</p>
+                                <p class="p-small_num">5 days ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">230,312</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai13.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">我與國家同在!</p>
+                                <p class="p-small_num">3 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">103,530</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai14.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">YA</p>
+                                <p class="p-small_num">3 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">83,094</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai15.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">偷偷把手指分2邊!</p>
+                                <p class="p-small_num">16 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">100,493</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai16.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">修圖修很大</p>
+                                <p class="p-small_num">3 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">384103</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li-gallery_item col bolder_smooth li-type_none li-gallery_item-rwd">
+                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-gallery_item">
+                    <a href="innerpage.html" class="a-gallery_item">
+                        <img src="images/tsai1.png" class="img-picture">
+                        <div class="div-intro">
+                            <div class="div-intro_text">
+                                <p class="p-single_picture">我的頭靜電很強哦~</p>
+                                <p class="p-small_num">3 hours ago</p>
+                            </div>
+                            <div class="div-intro_heart">
+                                <img src="images/heart.png" class="img-heart_picture">
+                                <p class="p-small_num">345,230</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-change_page">
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">&laquo;</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">1</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">2</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth li-change_page-rwd">3</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth li-change_page-rwd">4</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">...</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">99</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">100</p></a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page bolder_smooth">&raquo;</p></a></li>
+        </ul>
+    </div>
+    <footer class="foot">
+        <div class="div-information">
+            <div class="div-single_information">
+                <p><a href="index.html" class="p-information_title">Home</a></p>
+                <p class="p-information_content">View out main page.</p>
+            </div>
+            <div class="div-single_information">
+                <p><a href="About.html" class="p-information_title">About</a></p>
+                <p class="p-information_content">View more about us.</p>
+            </div>
+            <div class="div-single_information">
+                <p><a href="Donate.html" class="p-information_title">Donate</a></p>
+                <p class="p-information_content">Give me money!</p>
+            </div>
+        </div>
+        <div class="div-copyright">
+            <p class="p-copyright">Copyright &copy; 2019 Tsaigle</p>
+        </div>
+    </footer>
+</body>
+</html>
