@@ -8,7 +8,14 @@
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
         <link rel="stylesheet" type="text/css" media="screen" href="css\Donate.css">
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/Donate.js"></script>
     </head>
     <body>
         <header class="head">
@@ -36,78 +43,74 @@
                 </div>
             </nav>
         </header>
-        <div class="main">
-            <div class="div-main-top">
-                <p class="p-state"><b>Tsaigle - 註冊</b></p>
-            </div>
-            <div class="div-Donate">
-                <article class="Donate-article">
-                    <h1 class="Donate-article-title">贊助我們</h1>
-                    <hr class="Donate-article-hr">
-                    <img src="images/tsai2.png" class="Donate-article-image">
-                    <p>
-                        我們目前正在創業之初，資金極度缺乏，請多多資助我們!
-                    </p>
-                    <hr class="Donate-article-hr">
-                    <div class="progress-my">
+        <div class="main" id="pinContainer">
+            <div class="div-Donate" id="slideContainer">
+                <div class="div-donate_logo panel">
+                    <h1 class="donate-article-title reveal">你的錢可以換來阿哲的笑容</h1>
+                </div>
+                <div class="div-smile panel">
+                    <div class="sm">
+                        <img src="images/tsai6.png" alt="" class="img-smile">
+                        <img src="images/tsai8.png" alt="" class="img-smile">
+                    </div>
+                    <div class="sm">
+                        <img src="images/tsai14.png" alt="" class="img-smile">
+                        <img src="images/tsai15.png" alt="" class="img-smile">
+                    </div>
+                </div>
+                <div class="div-donate_info panel">
+                    <div class="div-info_center">
+                        <div class="progress-my">
                         <div class="progress-bar" style="width: 70%;">
-                            <span class="sr-only">35000/50000</span>
+                            <span class="sr-only reveal">35000/50000</span>
+                        </div>
+                        </div>
+                        <div class="donate-article-data">
+                            <div class="donate-article-donatedata">
+                                <div class="donate-cost">
+                                    <h1 class="donate-title reveal">$35000</h1>
+                                    目標$50,000
+                                </div>
+                                <div class="donate-people">
+                                    <h1 class="donate-title reveal">35</h1>
+                                    人贊助
+                                </div>
+                                <div class="donate-remainday">
+                                    <h1 class="donate-title reveal">40</h1> 
+                                    天結束
+                                </div>
+                            </div>
+                            <div class="donate-article-buttonarea">
+                                <input type="button" class="donate-article-button1" value="贊助專案">
+                                <input type="button" class="donate-article-button2" value="分享">
+                            </div>
                         </div>
                     </div>
-                    <hr class="Donate-article-hr">
-                    <div class="Donate-article-data">
-                        <div class="Donate-article-donatedata">
-                            <div class="Donate-cost">
-                                <h1 class="Donate-title">$35000</h1>
-                                目標$50,000
-                            </div>
-                            <div class="Donate-people">
-                                <h1 class="Donate-title">35</h1>
-                                人贊助
-                            </div>
-                            <div class="Donate-remainday">
-                                <h1 class="Donate-title">40</h1> 
-                                天結束
-                            </div>
-                        </div>
-                        <div class="Donate-article-buttonarea">
-                            <input type="button" class="Donate-article-button1" value="贊助專案">
-                            <input type="button" class="Donate-article-button2" value="分享">
-                        </div>
-                    </div>
-                </article>
-                <aside class="Donate-aside">
-                    <h1 class="Donate-aside-title">Give me Money</h1>
-                    <hr class="Donate-aside-hr1">
-                    <div class="div-project1">
-                        <h1 class="project1-title">愛的大禮包</h1>
+                </div>
+                <div class="div-project project1 panel">
+                    <h1 class="project-title">愛的大禮包</h1>
+                    <div class="div-project_content">
                         <img src="./images/gift1.jpg" class="project-image">
-                        <br>
-                        <p class="aside-text">
-                            禮包內容：
-                            <br>
-                            1. 政哲紀念海報(限量)
-                            <br>
-                            2. 為他的出道奉獻一點錢
-                            <br>
-                            3. 幫助政哲
-                        </p>
+                        <div class="div-project_info">
+                            <p class="aside-text reveal">禮包內容：</p>
+                            <p class="aside-text reveal">1. 政哲紀念海報(限量)</p>
+                            <p class="aside-text reveal">2. 為他的出道奉獻一點錢</p>
+                            <p class="aside-text reveal">3. 幫助政哲</p>
+                        </div>
                     </div>
-                    <div class="div-project2">
-                        <h1 class="project1-title">愛的大大禮包</h1>
+                </div>
+                <div class="div-project project2 panel">
+                    <h1 class="project-title">愛的大大禮包</h1>
+                    <div class="div-project_content">
                         <img src="./images/gift2.jpg" class="project-image">
-                        <br> 
-                        <p class="aside-text">
-                            禮包內容：
-                            <br>
-                            1. 政哲原味貼身衣物
-                            <br>
-                            2. 政哲呻吟原聲帶
-                            <br>
-                            3. 政哲到你家
-                        </p>
+                        <div class="div-project_info">
+                            <p class="aside-text reveal">禮包內容：</p>
+                            <p class="aside-text reveal">1. 政哲原味貼身衣物</p>
+                            <p class="aside-text reveal">2. 政哲呻吟原聲帶</p>
+                            <p class="aside-text reveal">3. 政哲到你家</p>
+                        </div>
                     </div>
-                </aside>
+                </div>
             </div>
         </div>
         <footer class="foot">

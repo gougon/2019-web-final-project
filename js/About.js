@@ -32,5 +32,5 @@ $(function () { // wait for document ready
 		})
 		.setClassToggle(revealElements[i], "visible") // add class toggle
 		.addTo(controllerReveal);
-	}
+    }
 });
