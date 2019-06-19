@@ -1,9 +1,13 @@
-$(function(){
-    var sideslider = $('[data-toggle=collapse-side]');
-        var get_sidebar = sideslider.attr('data-target-sidebar');
-        var get_content = sideslider.attr('data-target-content');
-        sideslider.click(function(event){
-          $(get_sidebar).toggleClass('in');
-          $(get_content).toggleClass('out');
-       });
-    });
+$(document).ready(function(){
+    
+});
+
+function openAdWin(){
+    console.log("Open Ad");
+    var w_width = 664;
+    var w_height = 572;
+    var x = (screen.width - w_width) / 2;
+    var y = (screen.height - w_height) / 2;
+    var feature = 'width=' + w_width + ', height=' + w_height + ', left=' + x + ', top=' + y;
+    window.open('Ads.html', '', feature);
+}

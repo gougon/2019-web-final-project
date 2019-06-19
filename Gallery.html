@@ -29,76 +29,25 @@
                 <div class="collapse navbar-collapse" id="example-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="menu-item-checked p-nav-checked"><a href="#">阿哲畫廊</a></li>
-                        <li class="menu-item p-nav"><a href="#">阿哲種類</a></li>
-                        <li class="menu-item p-nav"><a href="#">註冊Tsaigle</a></li>
+                        <li class="menu-item p-nav"><a href="Category.html">阿哲種類</a></li>
+                        <li class="menu-item p-nav"><a href="Signup.html">註冊Tsaigle</a></li>
                         <li class="menu-item p-nav"><a href="#">登入Tsaigle</a></li>
-                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" onclick="ReleaseSearchBar()"></li>
+                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch"></li>
+                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" ></li>
                     </ul>
                 </div>
             </div>
         </nav>
-              
-        <!--
-        <div class="div-nav">
-            <img src="images/logo.png" class="img-nav-logo">
-            <div class="div-nav-right">
-                <div class="div-unsearch">
-                    <div class="menu-item-checked">
-                        <a href="Gallery.html" class="p-nav-checked">
-                        <div class="div-nav-item">
-                            <div class="div-nav-item-name">阿哲畫廊</div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="Category.html" class="p-nav">
-                        <div class="div-nav-item">
-                            <div class="div-nav-item-name">阿哲種類</div>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="Signup.html" class="p-nav">
-                        <div class="div-nav-item">
-                            <div class="div-nav-item-name">註冊Tsaigle</div>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="Gallery.html" class="p-nav">
-                        <div class="div-nav-item">
-                            <div class="div-nav-item-name">登入Tsaigle</div>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="div-search">
-                    <input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch">
-                    <input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" onclick="ReleaseSearchBar()">
-                </div>
-            </div>
-        </div>
-        -->
-
-        <!--
-        <div class="div-nav-hidden">
-            <div class="div-unsearch bolder_smooth">
-                <p><a href="Gallery.html" class="p-nav hidden">Gallery</a></p>
-                <p><a href="Category.html" class="p-nav hidden">Category</a></p>
-                <p class="p-more bolder_smooth hidden"><a href="#" class="a-more hidden">UPLOAD</a></p>
-            </div>
-        </div>
-        -->
     </header>
     <div class="main">
         
         <div class="div-main-top">
-            <p class="p-state">Tsaigle - Gallery being watched</p>
-            <p class="p-more button hyperlink"><a href="#" class="a-more">UPLOAD</a></p>
+            <p class="p-state"><b>Tsaigle - 畫廊</b></p>
+            <p class="p-more button hyperlink"><a href="#" class="a-more">上傳阿哲相片</a></p>
         </div>
         <ul class="ul-gallery rowunb">
             <li class="li-gallery_item colunb li-type_none hyperlink">
-                <div class="div-ad_pop" style="cursor:pointer" onclick="openAdWin()"></div>
+                <div class="div-ad_pop" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
                     <a href="innerpage.html" class="a-gallery_item">
                         <img src="images/tsai1.png" class="img-picture">
@@ -260,7 +209,7 @@
                 </div>
             </li>
         </ul>
-        <p class="p-hot_picture p-more button hyperlink"><a href="#" class="a-more">+ More hot pictures</a></p>
+        <p class="p-hot_picture p-more button hyperlink"><a href="#" class="a-more">+ 更多熱門阿哲</a></p>
         <br class="clear_float">
         <ul class="ul-gallery rowunb">
             <li class="li-gallery_item colunb li-type_none hyperlink">
@@ -441,16 +390,16 @@
     <footer class="foot">
         <div class="div-information">
             <div class="div-single_information">
-                <p><a href="index.html" class="p-information_title">Home</a></p>
-                <p class="p-information_content">View out main page.</p>
+                <p class="p-information_title"><a href="index.html" class="a-information_title">首頁</a></p>
+                <p class="p-information_content"><b>回到Tsaigle首頁</b></p>
             </div>
             <div class="div-single_information">
-                <p><a href="About.html" class="p-information_title">About</a></p>
-                <p class="p-information_content">View more about us.</p>
+                <p class="p-information_title"><a href="About.html" class="a-information_title">關於</a></p>
+                <p class="p-information_content"><b>了解Tsaigle的背景故事</b></p>
             </div>
             <div class="div-single_information">
-                <p><a href="Donate.html" class="p-information_title">Donate</a></p>
-                <p class="p-information_content">Give me money!</p>
+                <p class="p-information_title"><a href="Donate.html" class="a-information_title">贊助</a></p>
+                <p class="p-information_content"><b>給我錢</b></p>
             </div>
         </div>
         <div class="div-copyright">

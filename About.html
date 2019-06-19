@@ -5,59 +5,66 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Gallery</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
         <link rel="stylesheet" type="text/css" media="screen" href="css\About.css">
         <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/About.js"></script>
     </head>
 <body>
     <header class="head">
-        <div class="div-signline">
-            <p><a href="#" class="p-sign">Sign Up</a></p>
-            <p><a href="#" class="p-sign">Login</a></p>
-        </div>
-        <div class="div-nav">
-            <img src="images/logo.png" class="img-nav-logo">
-            <div class="div-nav-right">
-                <div class="div-unsearch">
-                    <p><a href="Gallery.html" class="p-nav visible">Gallery</a></p>
-                    <p><a href="Category.html" class="p-nav visible">Category</a></p>
-                    <p class="p-more bolder_smooth visible"><a href="#" class="a-more visible">UPLOAD</a></p>
+        <nav class="navbar navbar-default" role="navigation" id="mynav">
+            <div class="container-fluid"> 
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/logo.png" class="img-nav-logo">
                 </div>
-                <div class="div-search">
-                    <input type="text" class="input-search bolder_smooth" placeholder="search ...">
-                    <a href="#"><img src="images/magnifier.png" class="img-search bolder_smooth"></a>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="menu-item p-nav"><a href="Gallery.html">阿哲畫廊</a></li>
+                        <li class="menu-item p-nav"><a href="Category.html">阿哲種類</a></li>
+                        <li class="menu-item p-nav"><a href="Signup.html">註冊Tsaigle</a></li>
+                        <li class="menu-item p-nav"><a href="#">登入Tsaigle</a></li>
+                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch"></li>
+                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" ></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="div-nav-hidden">
-            <div class="div-unsearch bolder_smooth">
-                <p><a href="Gallery.html" class="p-nav hidden">Gallery</a></p>
-                <p><a href="Category.html" class="p-nav hidden">Category</a></p>
-                <p class="p-more bolder_smooth hidden"><a href="#" class="a-more hidden">UPLOAD</a></p>
-            </div>
-        </div>
+        </nav>
     </header>
     <div class="main">
-        <div class="div-block">
-            <p class="p-title">Inventor : </p>
-            <ul class="ul-order">
+        <div class="div-block stripe-green">
+            <p class="p-title reveal">Inventor : </p>
+            <ul class="ul-order li-type_none">
                 <li class="li-col">
-                    <p class="p-content">
+                    <p class="p-content reveal">
                         高楷杰 : 台北科大在職學生，資工系二年級(2019)，曾將追求者的門牙踢斷。
                     </p>
                 </li>
                 <li class="li-col">
-                    <p class="p-content">
+                    <p class="p-content reveal">
                         溫致綱 : 台北科大在職學生，資工系二年級(2019)，素行良好、認真向學。
                     </p>
                 </li>
             </ul>
         </div>
-        <div class="div-block">
-            <p class="p-title">Contact : </p>
-            <p class="p-content">聯絡我們 :</p>
-            <ul class="ul-order">
+        <div class="div-block stripe-yellow">
+            <p class="p-title reveal">Contact : </p>
+            <p class="p-content reveal">聯絡我們 :</p>
+            <ul class="ul-order li-type_none">
                 <li class="li-col">
-                    <p class="p-content p-horizontal">
+                    <p class="p-content p-horizontal reveal">
                         mdvv85009@gmail.com
                         <a href="https://www.facebook.com/profile.php?id=100007804939382" class="a-fb">
                             <img src="images/fb_icon.png"class="img-fb">
@@ -65,7 +72,7 @@
                     </p>
                 </li>
                 <li class="li-col">
-                    <p class="p-content p-horizontal">
+                    <p class="p-content p-horizontal reveal">
                         freddy2531@gmail.com
                         <a href="https://www.facebook.com/freddy886677830" class="a-fb">
                             <img src="images/fb_icon.png"class="img-fb">
@@ -74,36 +81,36 @@
                 </li>
             </ul>
         </div>
-        <div class="div-block">
-            <p class="p-title">Advertise : </p>
-            <ul class="ul-order">
+        <div class="div-block stripe-pink">
+            <p class="p-title reveal">Advertise : </p>
+            <ul class="ul-order li-type_none">
                 <li class="li-col">
-                    <p class="p-content">歡迎任何廣告贊助 !</p>
+                    <p class="p-content reveal">歡迎任何廣告贊助 !</p>
                 </li>
                 <li class="li-col">
-                    <p class="p-content">Pay more View more!</p>
+                    <p class="p-content reveal">Pay more View more!</p>
                 </li>
             </ul>
         </div>
-        <div class="div-block">
-            <p class="p-title">Recruit : </p>
-            <ul class="horizontal ul-order">
+        <div class="div-block stripe-blue">
+            <p class="p-title reveal">Recruit : </p>
+            <ul class="horizontal ul-order li-type_none">
                 <li class="li-row">
-                    <p class="p-content p-row">你喜歡Cosplay嗎 ?</p>
+                    <p class="p-content p-row reveal">你喜歡Cosplay嗎 ?</p>
                 </li>
                 <li class="li-row">
-                    <p class="p-content p-row">你喜歡頭髮靜電嗎 ?</p>
+                    <p class="p-content p-row reveal">你喜歡頭髮靜電嗎 ?</p>
                 </li>
                 <li class="li-row">
-                    <p class="p-content p-row">你喜歡手指歪掉嗎 ?</p>
+                    <p class="p-content p-row reveal">你喜歡手指歪掉嗎 ?</p>
                 </li>
             </ul>
-            <p class="p-big_font"> 那你一定也喜歡蔡政哲 !</p>
-            <p class="p-small_font">我們將不會支付任何費用</p>
+            <p class="p-big_font reveal"> 那你一定也喜歡蔡政哲 !</p>
+            <p class="p-small_font reveal">我們將不會支付任何費用</p>
         </div>
-        <div class="div-block">
-            <p class="p-title">Concept :</p>
-            <p class="p-content">
+        <div class="div-block stripe-purple">
+            <p class="p-title reveal">Concept :</p>
+            <p class="p-article reveal">
                 這個網頁的製作是為了我們的好友 - 蔡公政哲所製作的，
                 由於蔡公政哲平日招人喜愛，得到親朋好友的一致讚賞，
                 因此我們突發奇想到，我們何不製作一個屬於他的畫廊呢? 
@@ -115,16 +122,16 @@
     <footer class="foot">
         <div class="div-information">
             <div class="div-single_information">
-                <p><a href="index.html" class="p-information_title">Home</a></p>
-                <p class="p-information_content">View out main page.</p>
+                <p class="p-information_title"><a href="index.html" class="a-information_title">首頁</a></p>
+                <p class="p-information_content"><b>回到Tsaigle首頁</b></p>
             </div>
             <div class="div-single_information">
-                <p><a href="About.html" class="p-information_title">About</a></p>
-                <p class="p-information_content">View more about us.</p>
+                <p class="p-information_title"><a href="About.html" class="a-information_title">關於</a></p>
+                <p class="p-information_content"><b>了解Tsaigle的背景故事</b></p>
             </div>
             <div class="div-single_information">
-                <p><a href="Donate.html" class="p-information_title">Donate</a></p>
-                <p class="p-information_content">Give me money!</p>
+                <p class="p-information_title"><a href="Donate.html" class="a-information_title">贊助</a></p>
+                <p class="p-information_content"><b>給我錢</b></p>
             </div>
         </div>
         <div class="div-copyright">

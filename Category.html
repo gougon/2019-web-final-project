@@ -5,52 +5,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Category</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" media="screen" href="css\Category.css">
         <script src="js/jquery-3.3.1.js"></script>
         <script src="js/Category.js"></script>
     </head>
 <body>
     <header class="head">
-        <div class="div-nav">
-            <img src="images/logo.png" class="img-nav-logo">
-            <div class="div-nav-right">
-                <div class="div-unsearch">
-                    <div class="menu-item">
-                        <a href="Gallery.html" class="p-nav visible">
-                        <div class="div-nav-item">
-                            <div class="div-nav-item-name">Gallery</div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="menu-item-checked">
-                        <a href="Category.html" class="p-nav-checked visible">
-                        <div class="div-nav-item">
-                            <div class="div-nav-item-name">Category</div>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="Signup.html" class="p-nav visible">
-                        <div class="div-nav-item">
-                            <div class="div-nav-item-name">SignUp</div>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="Gallery.html" class="p-nav visible">
-                        <div class="div-nav-item">
-                            <div class="div-nav-item-name">Login</div>
-                        </div>
-                        </a>
-                    </div>
-                    <p class="p-more bolder_smooth visible"><a href="#" class="a-more visible">UPLOAD</a></p>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid"> 
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/logo.png" class="img-nav-logo">
                 </div>
-                <div class="div-search">
-                    <input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch">
-                    <input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" onclick="ReleaseSearchBar()">
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="menu-item p-nav"><a href="Gallery.html">阿哲畫廊</a></li>
+                        <li class="menu-item-checked p-nav-checked"><a href="Category.html">阿哲種類</a></li>
+                        <li class="menu-item p-nav"><a href="Signup.html">註冊Tsaigle</a></li>
+                        <li class="menu-item p-nav"><a href="#">登入Tsaigle</a></li>
+                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch"></li>
+                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" ></li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
         <!--
         <div class="div-nav-hidden">
             <div class="div-unsearch bolder_smooth">
@@ -63,69 +49,69 @@
     </header>
     <div class="main">
         <div class="div-category">
-            <p class="p-state">Category</p>
+            <p class="p-state"><b>Tsaigle - 種類</b></p>
             <ul class="row">
                 <li class="col category_item li-type_none" 
                     data-title="Cosplay・コスプレ・角色扮演" 
                     data-desc="201">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai5.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai5.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
                 <li class="col category_item li-type_none"
                     data-title="Selfie・自撮り・自拍" 
                     data-desc="120">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai9.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai9.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
                 <li class="col category_item li-type_none" 
                     data-title="Clothes・服・衣物" 
                     data-desc="83">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai12.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai12.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
                 <li class="col category_item li-type_none" 
                     data-title="Tikan・ちかん・癡漢" 
                     data-desc="182">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai16.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai16.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
                 <li class="col category_item li-type_none" 
                     data-title="Violence・乱暴さ・暴力" 
                     data-desc="325">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai7.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai7.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
                 <li class="col category_item li-type_none" 
                     data-title="Idiot・バカ・笨蛋" 
                     data-desc="931">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai1.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai1.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
                 <li class="col category_item li-type_none" 
                     data-title="Crowded・多い・多人" 
                     data-desc="201">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai15.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai15.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
                 <li class="col category_item li-type_none" 
                     data-title="Daily・日常・日常" 
                     data-desc="201">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai6.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai6.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
                 <li class="col category_item li-type_none "
                     data-title="VR・仮想現実・虛擬現實" 
                     data-desc="201">
                     <a href="#" class="wrapper">
-                        <img src="images/tsai8.png" class="img-picture bolder_smooth">
+                        <img src="images/tsai8.png" class="img-picture bolder_smooth hyperlink">
                     </a>
                 </li>
             </ul>
@@ -188,16 +174,16 @@
     <footer class="foot">
         <div class="div-information">
             <div class="div-single_information">
-                <p><a href="index.html" class="p-information_title">Home</a></p>
-                <p class="p-information_content">View out main page.</p>
+                <p class="p-information_title"><a href="index.html" class="a-information_title">首頁</a></p>
+                <p class="p-information_content"><b>回到Tsaigle首頁</b></p>
             </div>
             <div class="div-single_information">
-                <p><a href="About.html" class="p-information_title">About</a></p>
-                <p class="p-information_content">View more about us.</p>
+                <p class="p-information_title"><a href="About.html" class="a-information_title">關於</a></p>
+                <p class="p-information_content"><b>了解Tsaigle的背景故事</b></p>
             </div>
             <div class="div-single_information">
-                <p><a href="Donate.html" class="p-information_title">Donate</a></p>
-                <p class="p-information_content">Give me money!</p>
+                <p class="p-information_title"><a href="Donate.html" class="a-information_title">贊助</a></p>
+                <p class="p-information_content"><b>給我錢</b></p>
             </div>
         </div>
         <div class="div-copyright">
