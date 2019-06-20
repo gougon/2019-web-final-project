@@ -12,6 +12,7 @@ $(document).ready(function () {
     var dbRef = firebase.database().ref();
     var accountName;
     var ImgTitle = GetRequest()['title'];
+    console.log(ImgTitle);
     var dbSearch = firebase.database().ref('image/').orderByChild('Title').equalTo(ImgTitle).once('value', function (snapshot) {
         snapshot.forEach(function (item) {
             firebase.database().ref('/user/' + item.val().uid).once('value').then(function (snapshot) {
