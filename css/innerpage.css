@@ -7,6 +7,14 @@
     text-decoration: none;
 }
 
+*:hover{
+    text-decoration: none;
+}
+
+*.active{
+    text-decoration: none;
+}
+
 .hyperlink{
     cursor: pointer;
     transition: 0.7s;

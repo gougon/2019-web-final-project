@@ -2,10 +2,10 @@ $(function () {
     var controller = new ScrollMagic.Controller();
     new ScrollMagic.Scene({
         triggerElement: "#trigger-div",
-        triggerHook: 0.9, // show, when scrolled 10% into view
-        duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
-        offset: 50 // move trigger to center of element
+        triggerHook: 0.9,
+        duration: "80%",
+        offset: 50
     })
-    .setClassToggle("#reveal", "visible") // add class to reveal
+    .setClassToggle("#reveal", "visible")
     .addTo(controller);
 });
