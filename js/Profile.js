@@ -79,7 +79,6 @@ $(document).ready(function () {
                         WriteNewImage($('#input_title').val(), uid, $("#Category1 option:selected").val(), $("#Category2 option:selected").val(), $("#Category3 option:selected").val(), currentDateTime, downloadURL);
                     });
                 });
-                window.location.href = "Gallery.html";
             });
         }
     }
