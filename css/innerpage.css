@@ -298,6 +298,11 @@
     display: flex;
     justify-content: space-between;
 }
+.div-upload_information{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
 .upload-hr{
     margin-top: 6px;
     margin-bottom: 6px;
@@ -393,6 +398,18 @@
     .colunb{
         width: calc(100%/1 - 24px);
         padding-bottom: calc(100%/1 - 24px);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .p-days{
+        font-size: 12px;
+    }
+    .p-view{
+        font-size: 12px;
+    } 
+    .p-heart{
+        font-size: 12px;
     }
 }
 
