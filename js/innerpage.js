@@ -24,9 +24,9 @@ $(document).ready(function () {
                 var heartAmount = $("<p/>").attr(item.val().loves).addClass('p-heart');
                 var imgHeartElement = $("<img/>").attr("src", "./images/heart.jpg").attr("height", "20px");
                 */
-                $("#information_date").html(snapshot.val().upload_Time);
+                $("#information_date").html(item.val().upload_Time);
                 $("#information_view").html(item.val().view_Time);
-                $("#information_heart").html(item.val().cat1 + ", " + item.val().cat2 + ", " + item.val().cat3);
+                $("#information_heart").html(item.val().loves);
             });
         });
     });

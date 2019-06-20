@@ -69,11 +69,11 @@
                     </div>
                 </div>
                 <div class="div-good">
-                    <img src="images/good.jpg" class="population-img" id = "good">
+                    <img src="images/good.jpg" class="population-img" id="good">
                     <p id="goodnumber">good<br>15</p>
                 </div>
                 <div class="div-good">
-                    <img src="images/bad.jpg" class="population-img" id = "bad">
+                    <img src="images/bad.jpg" class="population-img" id="bad">
                     <p id="badnumber">bad<br>25</p>
                 </div>
             </div>
@@ -81,8 +81,72 @@
                 <h1 class="title">上傳政哲美照
                 </h1>
                 <hr class="line">
-                <input type="file" id="inputfile"><br>
-                <input type="button" value="submit" id="btnUpload">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">標題</span>
+                    </div>
+                    <input id="input_title" type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="Category1">主題1</label>
+                    </div>
+                    <select class="custom-select" id="Category1">
+                        <option value="角色扮演">角色扮演</option>
+                        <option value="自拍">自拍</option>
+                        <option value="衣物">衣物</option>
+                        <option value="癡漢">癡漢</option>
+                        <option value="暴力">暴力</option>
+                        <option value="笨蛋">笨蛋</option>
+                        <option value="多人">多人</option>
+                        <option value="日常">日常</option>
+                        <option value="虛擬現實">虛擬現實</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="Category2">主題2</label>
+                    </div>
+                    <select class="custom-select" id="Category2">
+                        <option value="角色扮演">角色扮演</option>
+                        <option value="自拍">自拍</option>
+                        <option value="衣物">衣物</option>
+                        <option value="癡漢">癡漢</option>
+                        <option value="暴力">暴力</option>
+                        <option value="笨蛋">笨蛋</option>
+                        <option value="多人">多人</option>
+                        <option value="日常">日常</option>
+                        <option value="虛擬現實">虛擬現實</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="Category3">主題3</label>
+                    </div>
+                    <select class="custom-select" id="Category3">
+                        <option value="角色扮演">角色扮演</option>
+                        <option value="自拍">自拍</option>
+                        <option value="衣物">衣物</option>
+                        <option value="癡漢">癡漢</option>
+                        <option value="暴力">暴力</option>
+                        <option value="笨蛋">笨蛋</option>
+                        <option value="多人">多人</option>
+                        <option value="日常">日常</option>
+                        <option value="虛擬現實">虛擬現實</option>
+                    </select>
+                </div>
+                <!--<input type="file" id="inputfile"><br>-->
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputfile"
+                            aria-describedby="inputGroupFileAddon04">
+                        <label class="custom-file-label" for="inputfile">選擇檔案</label>
+                    </div>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="btnUpload">上傳</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="div-ad">

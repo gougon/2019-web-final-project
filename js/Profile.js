@@ -16,7 +16,7 @@ $(document).ready(function () {
     var $btnUpload = $('#btnUpload');
     var uid = GetRequest()['uid'];
     var uploadTimes;
-    var accountRef = firebase.database().ref('/user/' + uid).on('value' , function (snapshot) {
+    var accountRef = firebase.database().ref('/user/' + uid).on('value', function (snapshot) {
         $('#title').html(snapshot.val().account + " 的個人資料");
         if (snapshot.val().gender == "male")
             $('#gender').html("性別：男");
@@ -28,15 +28,15 @@ $(document).ready(function () {
         $('#badnumber').html('bad<br>' + snapshot.val().bad.toString());
         uploadTimes = snapshot.val().upload_times.toString();
     });
-    $('#good').click(function(){
-        firebase.database().ref('/user/' + uid).once('value' , function (snapshot) {
+    $('#good').click(function () {
+        firebase.database().ref('/user/' + uid).once('value', function (snapshot) {
             console.log(snapshot.val().bad);
-            updatePopulation(uid, snapshot.val().good + 1 , snapshot.val().bad);
+            updatePopulation(uid, snapshot.val().good + 1, snapshot.val().bad);
         });
     })
-    $('#bad').click(function(){
-        firebase.database().ref('/user/' + uid).once('value' , function (snapshot) {
-            updatePopulation(uid, snapshot.val().good , snapshot.val().bad + 1);
+    $('#bad').click(function () {
+        firebase.database().ref('/user/' + uid).once('value', function (snapshot) {
+            updatePopulation(uid, snapshot.val().good, snapshot.val().bad + 1);
         });
     })
     function formatFloat(num, pos) {
@@ -51,7 +51,8 @@ $(document).ready(function () {
         if (file != null) {
             $btnUpload.click(function (e) {
                 var filename = (file.name).split('.');
-                var uploadTask = storeRef.child('images/' + filename[0]).put(file, metadata);
+                console.log($('#input_title').val());
+                var uploadTask = storeRef.child('images/' + $('#input_title').val()).put(file, metadata);
                 uploadTask.on('state_changed', function (snapshot) {
                     switch (snapshot.state) {
                         case firebase.storage.TaskState.PAUSED: // or 'paused'
@@ -61,7 +62,6 @@ $(document).ready(function () {
                             break;
                     }
                 }, function (error) {
-
                 }, function () {
                     uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
                         updateUploadTimes(uid, uploadTimes);
@@ -76,7 +76,7 @@ $(document).ready(function () {
                             today.getDate() + '日(' +
                             today.getHours() + ':' + today.getMinutes() +
                             ')';
-                        WriteNewImage(filename[0], uid, 'ediot', 'baka', 'asshole', currentDateTime, downloadURL);
+                        WriteNewImage($('#input_title').val(), uid, $("#Category1 option:selected").val(), $("#Category2 option:selected").val(), $("#Category3 option:selected").val(), currentDateTime, downloadURL);
                     });
                 });
             });
@@ -98,10 +98,10 @@ $(document).ready(function () {
         updates['/image/' + Title] = newImage;
         firebase.database().ref().update(updates)
     }
-    function updatePopulation(uid, good , bad) {
+    function updatePopulation(uid, good, bad) {
         var db = firebase.database();
-        db.ref('/user/' + uid).update({ good: parseInt(good, 10)});
-        db.ref('/user/' + uid).update({ bad: parseInt(bad, 10)});
+        db.ref('/user/' + uid).update({ good: parseInt(good, 10) });
+        db.ref('/user/' + uid).update({ bad: parseInt(bad, 10) });
     }
     function updateUploadTimes(uid, oldupload) {
         var db = firebase.database();
