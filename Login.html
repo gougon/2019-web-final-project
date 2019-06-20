@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css\Login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <!---->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/Login.js"></script>
+</head>
+
+<body class="main">
+    <div class="head">
+        <h1 class="title">登入屬於您的Tsaigle</h1>
+    </div>
+    <hr class="line">
+    <div class="body">
+        <div class="div-inner">
+            <label for="login-emailinput" class="label">Email:</label>
+            <input id="login-emailinput" type="text" class="form-control" placeholder="email">
+        </div>
+        <div class="div-inner">
+            <label for="login-passwordinput" class="label">密碼:</label>
+            <input id="login-passwordinput" type="password" class="form-control" placeholder="password">
+        </div>
+        <div class="div-submit">
+            <input class="submit-button" type="button" value="Login" id="btnLogin">
+        </div>
+    </div>
+</body>
+
+</html>

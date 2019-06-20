@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css\Gallery.css">
+    <!-- firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <!---->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/Search.js"></script>
+</head>
+
+<body>
+    <header class="head">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/logo.png" class="img-nav-logo">
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="menu-item-checked p-nav-checked"><a href="#">阿哲畫廊</a></li>
+                        <li class="menu-item p-nav"><a href="Category.html">阿哲種類</a></li>
+                        <li class="menu-item p-nav"><a href="Signup.html">註冊Tsaigle</a></li>
+                        <li class="menu-item p-nav"><a href="#" onclick="openLoginWin()">登入Tsaigle</a></li>
+                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth"
+                                placeholder="search ..." id="inputSearch"></li>
+                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch"
+                                class="img-search bolder_smooth"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+
+        <div class="div-main-top">
+            <p class="p-state" id="search_result"><b>Tsaigle - 搜尋結果</b></p>
+            <p class="p-more button hyperlink"><a href="#" class="a-more">上傳阿哲相片</a></p>
+        </div>
+        <ul class="ul-gallery rowunb" id="ul_gallery">
+            <!--add searched data here-->
+    </div>
+    <footer class="foot">
+        <div class="div-information">
+            <div class="div-single_information">
+                <p class="p-information_title"><a href="index.html" class="a-information_title">首頁</a></p>
+                <p class="p-information_content"><b>回到Tsaigle首頁</b></p>
+            </div>
+            <div class="div-single_information">
+                <p class="p-information_title"><a href="About.html" class="a-information_title">關於</a></p>
+                <p class="p-information_content"><b>了解Tsaigle的背景故事</b></p>
+            </div>
+            <div class="div-single_information">
+                <p class="p-information_title"><a href="Donate.html" class="a-information_title">贊助</a></p>
+                <p class="p-information_content"><b>給我錢</b></p>
+            </div>
+        </div>
+        <div class="div-copyright">
+            <p class="p-copyright">Copyright &copy; 2019 Tsaigle</p>
+        </div>
+    </footer>
+</body>
+
+</html>

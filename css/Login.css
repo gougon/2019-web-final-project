@@ -1,0 +1,24 @@
+.main{
+    padding: 12.5%;
+    padding-top: 12px;
+    background: repeating-linear-gradient(45deg, #d8edb7 0,#d8edb7 50px,#e9ffc7 50px,#e9ffc7 100px);
+}
+.submit-button{
+    margin-top: 32px;
+    align-self: center;
+    width: fit-content;
+    width: 100px;
+    height: 40px;
+    padding: 0px 10px;
+    background-color: #3ebaf0;
+    border-radius: 6px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+.submit-button:hover{
+    background-color: #2fabe0;
+}
+
+.submit-button:active{
+    background-color: #219dcf;
+}

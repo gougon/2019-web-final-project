@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css\Profile.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <!---->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/Profile.js"></script>
+</head>
+
+<body>
+    <header class="head">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/logo.png" class="img-nav-logo">
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="menu-item p-nav"><a href="Gallery.html">阿哲畫廊</a></li>
+                        <li class="menu-item-checked p-nav-checked"><a href="Category.html">阿哲種類</a></li>
+                        <li class="menu-item p-nav"><a href="Signup.html">註冊Tsaigle</a></li>
+                        <li class="menu-item p-nav"><a href="#">登入Tsaigle</a></li>
+                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth"
+                                placeholder="search ..." id="inputSearch"></li>
+                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch"
+                                class="img-search bolder_smooth"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="div-main-top">
+            <p class="p-state">個人資料</p>
+        </div>
+        <div class="div-body">
+            <div class="div-profile">
+                <h1 class="title" id="title">XXX的個人資料</h1>
+                <hr class="line">
+                <div class="div-image_and_data">
+                    <div class="div-image">
+                        <img src="images/tsai4.png" class="img-image">
+                    </div>
+                    <div class="div-data">
+                        <p id="gender">性別：XXX</p>
+                        <p id="views">Profile 觀看次數：XXX</p>
+                        <p id="loves">共獲得愛心數：XXX</p>
+                        <p id="populations">名聲：XXX</p>
+                    </div>
+                </div>
+                <div class="div-good">
+                    <img src="images/good.jpg" class="population-img" id = "good">
+                    <p id="goodnumber">good<br>15</p>
+                </div>
+                <div class="div-good">
+                    <img src="images/bad.jpg" class="population-img" id = "bad">
+                    <p id="badnumber">bad<br>25</p>
+                </div>
+            </div>
+            <div class="div-upload">
+                <h1 class="title">上傳政哲美照
+                </h1>
+                <hr class="line">
+                <input type="file" id="inputfile"><br>
+                <input type="button" value="submit" id="btnUpload">
+            </div>
+        </div>
+        <div class="div-ad">
+        </div>
+        <footer class="foot">
+            <div class="div-information">
+                <div class="div-single_information">
+                    <p class="p-information_title"><a href="index.html" class="a-information_title">首頁</a></p>
+                    <p class="p-information_content"><b>回到Tsaigle首頁</b></p>
+                </div>
+                <div class="div-single_information">
+                    <p class="p-information_title"><a href="About.html" class="a-information_title">關於</a></p>
+                    <p class="p-information_content"><b>了解Tsaigle的背景故事</b></p>
+                </div>
+                <div class="div-single_information">
+                    <p class="p-information_title"><a href="Donate.html" class="a-information_title">贊助</a></p>
+                    <p class="p-information_content"><b>給我錢</b></p>
+                </div>
+            </div>
+            <div class="div-copyright">
+                <p class="p-copyright">Copyright &copy; 2019 Tsaigle</p>
+            </div>
+        </footer>
+</body>
+
+</html>
