@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Gallery</title>
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" media="screen" href="css\Gallery.css">
-        <!-- firebase services -->
-        <script src="js/jquery-3.3.1.js"></script>
-        <script src="js/Gallery.js"></script>
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css\Gallery.css">
+    <!-- firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <!---->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/Gallery.js"></script>
+</head>
+
 <body>
     <header class="head">
         <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid"> 
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
                         <span class="sr-only">切换导航</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -31,21 +39,24 @@
                         <li class="menu-item-checked p-nav-checked"><a href="#">阿哲畫廊</a></li>
                         <li class="menu-item p-nav"><a href="Category.html">阿哲種類</a></li>
                         <li class="menu-item p-nav"><a href="Signup.html">註冊Tsaigle</a></li>
-                        <li class="menu-item p-nav"><a href="#">登入Tsaigle</a></li>
-                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch"></li>
-                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" ></li>
+                        <li class="menu-item p-nav"><a href="#" onclick="openLoginWin()">登入Tsaigle</a></li>
+                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth"
+                                placeholder="search ..." id="inputSearch"></li>
+                        <li class="menu-search"><input type="image" src="images/magnifier.png"
+                                id="btnSearch" class="img-search bolder_smooth"></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="main">
-        
+
         <div class="div-main-top">
             <p class="p-state"><b>Tsaigle - 畫廊</b></p>
             <p class="p-more button hyperlink"><a href="#" class="a-more">上傳阿哲相片</a></p>
         </div>
-        <ul class="ul-gallery rowunb">
+        <ul class="ul-gallery rowunb" id="ul_gallery">
+            <!--
             <li class="li-gallery_item colunb li-type_none hyperlink">
                 <div class="div-ad_pop" onclick="openAdWin()"></div>
                 <div class="div-gallery_item">
@@ -374,17 +385,40 @@
                     </a>
                 </div>
             </li>
+        -->
         </ul>
-        <ul class="ul-change_page">
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">&laquo;</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">1</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">2</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth li-change_page-rwd">3</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth li-change_page-rwd">4</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">...</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">99</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">100</p></a></li>
-            <li class="li-type_none"><a href="#" class="a-change_page"><p class="li-change_page hyperlink bolder_smooth">&raquo;</p></a></li>
+        <ul class="ul-change_page" id="mom_change_page">
+            <!--
+            <li class="li-type_none"><a href="#" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth">&laquo;</p>
+                </a></li>
+            -->
+            <li class="li-type_none"><a href="Gallery.html" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth">1</p>
+                </a></li>
+            <!--
+            <li class="li-type_none"><a href="#" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth">2</p>
+                </a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth li-change_page-rwd">3</p>
+                </a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth li-change_page-rwd">4</p>
+                </a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth">...</p>
+                </a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth">99</p>
+                </a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth">100</p>
+                </a></li>
+            <li class="li-type_none"><a href="#" class="a-change_page">
+                    <p class="li-change_page hyperlink bolder_smooth">&raquo;</p>
+                </a></li>
+                -->
         </ul>
     </div>
     <footer class="foot">
@@ -407,4 +441,5 @@
         </div>
     </footer>
 </body>
+
 </html>

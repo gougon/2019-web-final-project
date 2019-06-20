@@ -25,7 +25,7 @@
 
 .head{
     position: fixed;
-    padding: 0px;
+    z-index: 200;
     width: 100%;
 }
 
@@ -33,7 +33,6 @@
     width: fit-content;
     height: 40px;
     padding: 0px 10px;
-    margin: 0px;
     background-color: #3ebaf0;
 }
 
@@ -44,6 +43,7 @@
 }
 
 /*nav bar*/
+
 .navbar{
     border-style: none;
     background-color: #426642;
@@ -179,19 +179,16 @@
 .div-nav-hidden{
     padding: 0 12.5%;
 }
-/*nav bar*/
-
 /* main */
 .main{
-    padding: 0px 12.5%;
-    padding-top: 90px;
-    overflow: auto;
+    padding: 90px 12.5% 14px 12.5%;
+    justify-content: space-between;
     background:repeating-linear-gradient(45deg, #d8edb7 0,#d8edb7 50px,#e9ffc7 50px,#e9ffc7 100px);
 }
 
 @media screen and (max-width: 1024px){
     .main{
-        padding: 90px 6% 0 6%;
+        padding-top: 160px;
     }
 }
 
@@ -206,10 +203,6 @@
     .div-main-top{
         display: block;
     }
-}
-
-.p-state{
-    line-height: 40px;
 }
 
 @media screen and (max-width: 580px){
@@ -314,7 +307,6 @@
 .img-summary{
     width: 100%;
 }
-
 /*footer*/
 .div-information{
     display: flex;
@@ -383,6 +375,28 @@
     margin-bottom: 0;
 }
 /*footer*/
+
+.overlay{
+    width: 100%;
+    display: none;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    widows: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    pointer-events: none;
+    font-weight: 100;
+}
+
+.overlay p{
+    font-weight: 100;
+    margin: 0px;
+    padding: 0px;
+}
 
 @media screen and (max-width: 1024px){
     .visible{

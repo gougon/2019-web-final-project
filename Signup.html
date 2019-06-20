@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Signup</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" media="screen" href="css\Signup.css">
-        <!-- firebase services -->
-        <script src="js/jquery-3.3.1.js"></script>
-        <script src="js/Signup.js"></script>
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css\Signup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <!---->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/Signup.js"></script>
+</head>
+
 <body>
     <header class="head">
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid"> 
+        <nav class="navbar navbar-default" role="navigation" id="mynav">
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
                         <span class="sr-only">切换导航</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -30,80 +37,70 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="menu-item p-nav"><a href="Gallery.html">阿哲畫廊</a></li>
                         <li class="menu-item p-nav"><a href="Category.html">阿哲種類</a></li>
-                        <li class="menu-item-checked p-nav-checked"><a href="Signup.html">註冊Tsaigle</a></li>
+                        <li class="menu-item p-nav"><a href="Signup.html">註冊Tsaigle</a></li>
                         <li class="menu-item p-nav"><a href="#">登入Tsaigle</a></li>
-                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth" placeholder="search ..." id="inputSearch"></li>
-                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch" class="img-search bolder_smooth" ></li>
+                        <li class="menu-search"><input type="text" class="input-search-blank bolder_smooth"
+                                placeholder="search ..." id="inputSearch"></li>
+                        <li class="menu-search"><input type="image" src="images/magnifier.png" id="btnSearch"
+                                class="img-search bolder_smooth"></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!--
-        <div class="div-nav-hidden">
-            <div class="div-unsearch bolder_smooth">
-                <p><a href="Gallery.html" class="p-nav hidden">Gallery</a></p>
-                <p><a href="Category.html" class="p-nav hidden">Category</a></p>
-                <p class="p-more bolder_smooth hidden"><a href="#" class="a-more hidden">UPLOAD</a></p>
-            </div>
-        </div>
-        -->
     </header>
     <div class="main">
         <div class="div-main-top">
-            <p class="p-state"><b>Tsaigle - 註冊</b></p>
+            <p class="p-state">Tsaigle - 註冊</p>
         </div>
         <div class="div-body">
             <div class="div-signup">
-                <h1 class="title">Create Your Tsaigle Account</h1>
+                <h1 class="title">註冊 Tsaigle 帳號</h1>
                 <hr class="line">
                 <div class="div-inner">
-                    <label for="sign-accountinput" class="label">Account:</label>
+                    <label for="sign-accountinput" class="label">帳號:</label>
                     <input id="sign-accountinput" type="text" class="form-control" placeholder="account">
                 </div>
                 <div class="div-inner">
-                    <label for="sign-passwordinput" class="label">Password:</label>
+                    <label for="sign-passwordinput" class="label">密碼:</label>
                     <input id="sign-passwordinput" type="password" class="form-control" placeholder="password">
                 </div>
                 <div class="div-inner">
-                    <label for="repasswordinput" class="label">ReType-Password:</label>
+                    <label for="repasswordinput" class="label">重新輸入密碼:</label>
                     <input id="repasswordinput" type="password" class="form-control" placeholder="retype-password">
                 </div>
                 <div class="div-inner">
-                    <label for="emailinput" class="label">Email:</label>
+                    <label for="emailinput" class="label">電子郵件:</label>
                     <input id="emailinput" type="email" class="form-control" placeholder="email">
                 </div>
                 <div class="div-inner">
-                    <label for="genderchoose" class="label" style="margin-top: 16px">Gender:</label>
+                    <label for="genderchoose" class="label" style="margin-top: 16px">性別:</label>
                     <form class="gender" id="genderchoose">
-                        <h6 class="innertext"><input name="gender" type="radio"> Male</h6>
-                        <h6 class="innertext"><input name="gender" type="radio"> Female</h6>
+                        <h6 class="innertext"><input name="gender" type="radio" value="male"> 男性</h6>
+                        <h6 class="innertext"><input name="gender" type="radio" value="female"> 女性</h6>
                     </form>
                     <div class="div-certify">
-                        <h6 class="innertext"><input type="checkbox" id="checkbox-certify1" required="true">  I certify that I'm 18 years old!</h6>
-                        <h6 class="innertext"><input type="checkbox" id="checkbox-certify2">  I agree to the Terms of Use and Privacy Policy.</h6>
+                        <h6 class="innertext"><input type="checkbox" id="checkbox-certify1" required="true"> 我已年滿十八歲!</h6>
+                        <h6 class="innertext"><input type="checkbox" id="checkbox-certify2"> 我同意並遵守有關於本站的任何規章.</h6>
                     </div>
                 </div>
                 <div class="div-submit">
                     <input class="submit-button" type="button" value="Sign up" id="btnSignUp">
                 </div>
-                <div class="div-inner" id="sign-info">
-                    No one login...
-                </div>
             </div>
             <div class="div-login_and_summary">
                 <div class="div-login">
-                    <h1 class="title">Login To Your Tsaigle Account</h1>
+                    <h1 class="title">登入屬於您的Tsaigle</h1>
                     <hr class="line">
                     <div class="div-inner">
-                        <label for="login-accountinput" class="label">Account:</label>
-                        <input id="login-accountinput" type="text" class="form-control" placeholder="account">
+                        <label for="login-emailinput" class="label">電子郵件:</label>
+                        <input id="login-emailinput" type="text" class="form-control" placeholder="email">
                     </div>
                     <div class="div-inner">
-                        <label for="login-passwordinput" class="label">Password:</label>
+                        <label for="login-passwordinput" class="label">密碼:</label>
                         <input id="login-passwordinput" type="password" class="form-control" placeholder="password">
                     </div>
                     <div class="div-submit">
-                        <input class= "submit-button" type="submit" value="Login">
+                        <input class="submit-button" type="button" value="Login" id="btnLogin">
                     </div>
                 </div>
                 <div class="div-summary">
@@ -141,4 +138,5 @@
         </div>
     </footer>
 </body>
+
 </html>

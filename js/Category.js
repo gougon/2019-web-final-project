@@ -17,7 +17,9 @@ $(document).ready(function(){
         var overlay = $(this).children('.overlay');
     
         overlay.fadeOut(500);
-    }) 
+    })
+    var $inputSearch = $("#inputSearch");
+    var $btnSearch = $("#btnSearch");
 });
 
 function openAdWin(){
@@ -27,4 +29,17 @@ function openAdWin(){
     var y = (screen.height - w_height) / 2;
     var feature = 'width=' + w_width + ', height=' + w_height + ', left=' + x + ', top=' + y;
     window.open('Ads.html', '', feature)
+}
+function ReleaseSearchBar(){
+    console.log($("#inputSearch").val());
+    if($("#inputSearch").val() == ""){
+        if($("#inputSearch").hasClass("input-search-blank")){
+            $("#inputSearch").removeClass("input-search-blank");
+            $("#inputSearch").addClass("input-search");
+        }
+        else{
+            $("#inputSearch").removeClass("input-search");
+            $("#inputSearch").addClass("input-search-blank");
+        }
+    }
 }
