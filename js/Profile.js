@@ -94,6 +94,7 @@ $(document).ready(function () {
             upload_Time: time,
             download_url: url
         };
+        //
         var updates = {};
         updates['/image/' + Title] = newImage;
         firebase.database().ref().update(updates)
