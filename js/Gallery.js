@@ -10,10 +10,8 @@ $(document).ready(function () {
     };
     firebase.initializeApp(firebaseConfig);
     var page;
-    if(GetRequest()['page'] == 2) page = 1;
-    else page = 16;
     var dbImgRef = firebase.database().ref('image/');
-    dbImgRef.limitToFirst(page).on('value', function (snapshot) {
+    dbImgRef.limitToFirst(16).on('value', function (snapshot) {
         var numberOFImage = snapshot.numChildren();
         console.log(numberOFImage);
         snapshot.forEach(function (item) {
@@ -28,7 +26,7 @@ $(document).ready(function () {
             var paragraph_small_num1 = $("<p/>").addClass("p-small_num").html(item.val().upload_Time);
             var div_intro_heart = $("<div/>").addClass("div-intro_heart");
             var img_heart = $("<img/>").attr("src", "images/heart.png").addClass("img-heart_picture");
-            var paragraph_small_num2 = $("<p/>").addClass("p-small_num").html(item.val().loves);
+            var paragraph_small_num2 = $("<p/>").addClass("p-small_num").html(item.val().view_Time);
             $('#ul_gallery').append(list_gallery_item);
             list_gallery_item.append(div_ad);
             list_gallery_item.append(div_gallery_item);
